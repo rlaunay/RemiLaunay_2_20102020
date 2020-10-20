@@ -1,0 +1,118 @@
+/**
+* Variables
+**/  
+:root {
+    --color-primary: #0065FC;
+    --color-secondary: #DEEBFF;
+
+    --color-grey:#F2F2F2;
+
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+/**
+* Base
+*/
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+section {
+    margin: 50px;
+}
+
+/**
+* Card
+*/
+
+.card {
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.card__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card > img {
+    height: auto;
+    overflow: auto;
+}
+
+/**
+* Lodging
+*/
+
+.lodging {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.lodging > div {
+    background-color: var(--color-grey);
+}
+
+/**
+* Lodging list
+*/
+
+/**
+* Activity
+*/
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 20px 200px;
+    grid-template-areas: 
+        "card1 card2 card4 card5"
+        "card1 card2 card4 card6"
+        "card1 card3 card4 card6";
+    grid-gap: 50px;
+}
+.activity-card-1 {grid-area: card1;}
+.activity-card-2 {grid-area: card2;}
+.activity-card-3 {grid-area: card3;}
+.activity-card-4 {grid-area: card4;}
+.activity-card-5 {grid-area: card5;}
+.activity-card-6 {grid-area: card6;}
+
+.card-activity__desc {
+    height: 50px;
+}
+
+/**
+* Footer
+*/
+
+footer {
+    display: flex;
+    background-color: var(--color-grey);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
