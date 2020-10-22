@@ -6,37 +6,42 @@
     <title>Reservia</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/2c740296bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img src="./img/logo/Reservia.svg" alt="">
-            <a href="#">Hébergements</a>
-            <a href="#">Activité</a>
-            <a href="#">S'inscrire</a>
+            <img class="nav__items nav__logo" src="./img/logo/Reservia.svg" alt="">
+            <a class="nav__items nav__link active" href="#">Hébergements</a>
+            <a class="nav__items nav__link" href="#">Activités</a>
+            <a class="nav__items nav__register" href="#">S'inscrire</a>
         </nav>
-        <h2>Trouver votre hébergements pour des vacances de rêve</h2>
-        <h4>En plain centre ville ou pleine nature</h4>
         <div class="search">
-            <div>logo gmap</div>
-            <input type="text">
-            <button>Rechercher</button>
+            <h2>Trouver votre hébergements pour des vacances de rêve</h2>
+            <h4>En plain centre ville ou pleine nature</h4>
+            <div class="search__input input-group">
+                <div class="input-group-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <input class="input-group-text" type="text">
+                <button class="input-group-btn">Rechercher</button>
+            </div>
         </div>
-        <h3>Filtres</h3>
         <div class="filter">
-            <div>
+            <h3>Filtres</h3>
+            <div class="filter__items">
                 <input type="checkbox" name="eco" id="eco">
                 <label for="eco">Économique</label>
             </div>
-            <div>
+            <div class="filter__items">
                 <input type="checkbox" name="family" id="family">
                 <label for="family">Familial</label>
             </div>
-            <div>
+            <div class="filter__items">
                 <input type="checkbox" name="romantic" id="romantic">
                 <label for="romantic">Romantique</label>
             </div>
-            <div>
+            <div class="filter__items">
                 <input type="checkbox" name="animals" id="animals">
                 <label for="animals">Animaux autorisé</label>
             </div>
@@ -48,112 +53,103 @@
         <div class="lodging__popular">
             <h2>Les plus populaires</h2>
 
-            <div class="lodging__popular-grid">
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/hotel-soleil-matin_small.jpg" alt="">
-                        <div>
-                            <h3>Hôtel Le soleil du matin</h3>
-                            <p>Nuit à partir de 128€</p>
-                            <div>étoile</div>
-                        </div>
+            <div class="lodging__popular-list">
+                <div class="card card__lodging-pop">
+                    <a class="card__link" href=""></a>
+                    <div class="image hotel-soleil-matin"></div>     
+                    <div>
+                        <h3>Hôtel Le soleil du matin</h3>
+                        <p>Nuit à partir de 128€</p>
+                        <div>étoile</div>
                     </div>
-                </a>
+                </div>
 
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/aubiere-le-panier_small.jpg" alt="">
-                        <div>
-                            <h3>Au cœur de l'eau Chambres d'hôtes</h3>
-                            <p>Nuit à partir de 71€</p>
-                            <div>étoile</div>
-                        </div>
+                <div class="card card__lodging-pop">
+                    <a class="card__link" href=""></a>
+                    <div class="image aubiere-le-panier"></div>     
+                    <div>
+                        <h3>Au cœur de l'eau Chambres d'hôtes</h3>
+                        <p>Nuit à partir de 71€</p>
+                        <div>étoile</div>
                     </div>
-                </a>
+                </div>
 
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/hotel-tout-bleu-blanc_small.jpg" alt="">
-                        <div>
-                            <h3>Hôtel Tout bleu et Blanc</h3>
-                            <p>Nuit à partir de 68€</p>
-                            <div>étoile</div>
-                        </div>
+                <div class="card card__lodging-pop">
+                    <a class="card__link" href=""></a>
+                    <div class="image hotel-tout-bleu-blanc"></div>
+                    <div>
+                        <h3>Hôtel Tout bleu et Blanc</h3>
+                        <p>Nuit à partir de 68€</p>
+                        <div>étoile</div>
                     </div>
-                </a>
+                </div>
             </div>
 
         </div>
 
-        <div class="lodging__list">
+        <div class="lodging__all">
             <h2>Hébergements à Marseille</h2>
 
-            <div class="lodging__list-grid">
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/auberge-la-cannebiere_small.jpg" alt="">
-                        <div>
-                            <h3>Auberge la cannebière</h3>
-                            <p>Nuit à partir de 25€</p>
-                            <div>etoiles</div>
-                        </div>
+            <div class="lodging__all-list">
+                <div class="card card__lodging-all">
+                    <a class="card__link" href=""></a>
+                    <div class="image auberge-la-cannebiere"></div>     
+                    <div class="card-desc__lodging-all">
+                        <h3>Auberge la cannebière</h3>
+                        <p>Nuit à partir de 25€</p>
+                        <div>etoiles</div>
                     </div>
-                </a>
-    
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/hotel-du-port_small.jpg" alt="">
-                        <div>
-                            <h3>Hôtel du port</h3>
-                            <p>Nuit à partir de 52€</p>
-                            <div>etoiles</div>
-                        </div>
+                </div>
+
+                <div class="card card__lodging-all">
+                    <a class="card__link" href=""></a>
+                    <div class="image hotel-du-port"></div>     
+                    <div class="card-desc__lodging-all">
+                        <h3>Hôtel du port</h3>
+                        <p>Nuit à partir de 52€</p>
+                        <div>etoiles</div>
                     </div>
-                </a>
-    
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/hotel-les-mouettes_small.jpg" alt="">
-                        <div>
-                            <h3>Hôtel les mouettes</h3>
-                            <p>Nuit à partir de 76€</p>
-                            <div>etoiles</div>
-                        </div>
+                </div>
+
+                <div class="card card__lodging-all">
+                    <a class="card__link" href=""></a>
+                    <div class="image hotel-les-mouettes"></div>     
+                    <div class="card-desc__lodging-all">
+                        <h3>Hôtel les mouettes</h3>
+                        <p>Nuit à partir de 76€</p>
+                        <div>etoiles</div>
                     </div>
-                </a>
-    
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/hotel-de-la-mer_small.jpg" alt="">
-                        <div>
-                            <h3>Hôtel de la mer</h3>
-                            <p>Nuit à partir de 46€</p>
-                            <div>etoiles</div>
-                        </div>
+                </div>
+
+                <div class="card card__lodging-all">
+                    <a class="card__link" href=""></a>
+                    <div class="image hotel-de-la-mer"></div>     
+                    <div class="card-desc__lodging-all">
+                        <h3>Hôtel de la mer</h3>
+                        <p>Nuit à partir de 46€</p>
+                        <div>etoiles</div>
                     </div>
-                </a>
-    
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/aubiere-le-panier_small.jpg" alt="">
-                        <div>
-                            <h3>Auberge Le Panier</h3>
-                            <p>Nuit à partir de 23€</p>
-                            <div>etoiles</div>
-                        </div>
+                </div>
+
+                <div class="card card__lodging-all">
+                    <a class="card__link" href=""></a>
+                    <div class="image aubiere-le-panier"></div>     
+                    <div class="card-desc__lodging-all">
+                        <h3>Auberge Le Panier</h3>
+                        <p>Nuit à partir de 23€</p>
+                        <div>etoiles</div>
                     </div>
-                </a>
-    
-                <a href="#">
-                    <div class="card">
-                        <img src="./img/hebergements/4_small/hotel-chez-azima_small.jpg" alt="">
-                        <div>
-                            <h3>Hôtel chez Azima</h3>
-                            <p>Nuit à partir de 96€</p>
-                            <div>etoiles</div>
-                        </div>
+                </div>
+
+                <div class="card card__lodging-all">
+                    <a class="card__link" href=""></a>
+                    <div class="image hotel-chez-azima"></div>     
+                    <div class="card-desc__lodging-all">
+                        <h3>Hôtel chez Azima</h3>
+                        <p>Nuit à partir de 96€</p>
+                        <div>etoiles</div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -161,22 +157,19 @@
     <!-- Section 2 Activité -->
     <section class="activity">
         <h2>Activité à Marseille</h2>
-
-        <div class="activity-grid">
-            
-            <div class="card card-activity activity-card-1">
+        <div class="activity-list">
+            <div class="card card-activity">
                 <a class="card__link" href=""></a>
-                <img src="./img/activites/4_small/vieux-port_small.jpg" alt="">
+                <div class="image vieux-port"></div> 
                 <div class="card-activity__desc">
                     <h3>Vieux Port</h3>
                 </div>
             </div>
         
-
         
-            <div class="card card-activity activity-card-2">
+            <div class="card card-activity">
                 <a class="card__link" href=""></a>
-                <img src="./img/activites/4_small/fort-de-pomegue_small.jpg" alt="">
+                <div class="image fort-de-pomegue"></div> 
                 <div class="card-activity__desc">
                     <h3>Fort Pomègues</h3>
                 </div>
@@ -184,9 +177,9 @@
         
 
         
-            <div class="card card-activity activity-card-3">
+            <div class="card card-activity">
                 <a class="card__link" href=""></a>
-                <img src="./img/activites/4_small/iles-du-frioul_small.jpg" alt="">
+                <div class="image iles-du-frioul"></div> 
                 <div class="card-activity__desc">
                     <h3>îles du Frioul</h3>
                 </div>
@@ -194,9 +187,9 @@
         
 
         
-            <div class="card card-activity activity-card-4">
+            <div class="card card-activity">
                 <a class="card__link" href=""></a>
-                <img src="./img/activites/4_small/parc-national_small.jpg" alt="">
+                <div class="image parc-national"></div> 
                 <div class="card-activity__desc">
                     <h3>Parc National des Calanques</h3>
                 </div>
@@ -204,9 +197,9 @@
         
 
         
-            <div class="card card-activity activity-card-5">
+            <div class="card card-activity">
                 <a class="card__link" href=""></a>
-                <img src="./img/activites/4_small/notre-dame-de-la-garde_small.jpg" alt="">
+                <div class="image notre-dame-de-la-garde"></div> 
                 <div class="card-activity__desc">
                     <h3>Notre-Dame-de-la-Garde</h3>
                 </div>
@@ -214,9 +207,9 @@
         
 
         
-            <div class="card card-activity activity-card-6">
+            <div class="card card-activity">
                 <a class="card__link" href=""></a>
-                <img src="./img/activites/4_small/parc-longchamp_small.jpg" alt="">
+                <div class="image parc-longchamp"></div> 
                 <div class="card-activity__desc">
                     <h3>Parc Longchamp</h3>
                 </div>
@@ -227,21 +220,21 @@
     </section>
 
     <footer>
-        <div class="about">
-            <h3>A props</h3>
-            <a href="#">Fonctionnement du site</a>
-            <a href="#">Conditions générales de vente</a>
-            <a href="#">Données et confidentialité</a>
+        <div class="footer__block">
+            <h3 class="footer__title">A props</h3>
+            <a class="footer__link" href="#">Fonctionnement du site</a>
+            <a class="footer__link" href="#">Conditions générales de vente</a>
+            <a class="footer__link" href="#">Données et confidentialité</a>
         </div>
-        <div class="our-lodging">
-            <h3>Nos hébergements</h3>
-            <a href="#">Charte qualité</a>
-            <a href="#">Soumettre votre hôtel</a>
+        <div class="footer__block">
+            <h3 class="footer__title">Nos hébergements</h3>
+            <a class="footer__link" href="#">Charte qualité</a>
+            <a class="footer__link" href="#">Soumettre votre hôtel</a>
         </div>
-        <div class="assistance">
-            <h3>Assistance</h3>
-            <a href="#">Centre d'aide</a>
-            <a href="#">Nous contacter</a>
+        <div class="footer__block">
+            <h3 class="footer__title">Assistance</h3>
+            <a class="footer__link" href="#">Centre d'aide</a>
+            <a class="footer__link" href="#">Nous contacter</a>
         </div>
     </footer>
 </body>
