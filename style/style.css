@@ -281,7 +281,6 @@ section {
 .lodging > div {
     background-color: var(--color-grey);
     border-radius: 50px;
-    padding: 4rem;
 }
 
 .lodging__all { 
@@ -290,6 +289,16 @@ section {
     justify-content: space-around;
     margin-right: 2.5rem;
     flex-grow: 1;
+    padding: 2rem 0;
+}
+
+.lodging__all > * {
+    margin: 1rem 2rem;
+}
+
+.lodging__all > h3 {
+    font-size: 2rem;
+    margin: 3rem 2rem;
 }
 
 .lodging__all-list {
@@ -329,26 +338,31 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
-.lodging__popular { 
+.lodging__popular {
+    padding: 2rem 0;
     order: 2;
-    flex-basis: 0 1 auto;
+    width: 39rem;
     margin-left: 2.5rem;
 }
 
 .lodging__popular-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 }
 
 
 .card__lodging-pop {
     padding: 1rem;
     height: 15rem;
-    width: 35rem;
-    margin: 2rem 0;
+    /*width: 35rem;*/
+    margin: 2rem;
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-gap: 1rem;
@@ -396,17 +410,22 @@ section {
     grid-template-rows: 1fr 75px;
 }
 
+.card-activity__desc {
+    padding: 0 2rem;
+}
+
 /**
 * Footer
 */
 
 footer {
-    display: flex;
+    /* display: flex; */
     background-color: var(--color-grey);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .footer__block {
-    width: 33.3333%;
     display: flex;
     flex-direction: column;
     padding: 4rem;
@@ -421,7 +440,61 @@ footer {
 * RESPONSIVE
 */
 
+@media screen and (max-width: 1350px) {
+    .lodging {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lodging__all {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .lodging__popular {
+        margin: 1rem 0;
+        width: 100%;
+        order: 0;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+
+    .lodging {
+        flex-direction: column;
+    }
+
+    .activity {
+        padding: 2rem;
+    }
+
+    .activity-list {
+        grid-template-areas: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: auto;
+        grid-gap: 5rem;
+        height: auto;
+    }
+
+    .activity-list > div:first-child,
+    .activity-list > div:nth-of-type(2),
+    .activity-list > div:nth-of-type(3),
+    .activity-list > div:nth-of-type(4),
+    .activity-list > div:nth-of-type(5),
+    .activity-list > div:last-child { grid-area: unset; }
+
+    .card-activity {
+        height: 25rem;
+        grid-area: auto;
+    }
+}
+
 @media screen and (max-width: 640px) {
+
+    html {
+        font-size: 50%;
+    }
     /**
     * HEADER 
     */
@@ -496,5 +569,22 @@ footer {
 
     .info {
         margin: 2rem;
+    }
+
+    /**
+    * SECTION
+    */
+
+    section {
+        margin: 0;
+    }
+
+    .lodging > div {
+        /*padding: 0;*/
+        border-radius: 0;
+    }
+
+    .lodging__all {
+        background-color: var(--color-white) !important;
     }
 }
