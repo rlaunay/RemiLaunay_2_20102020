@@ -50,13 +50,17 @@ header {
 
 /* nav */
 nav {
-    display: grid;
-    grid-template-columns: 8fr 1fr 1fr 1fr;
+    display: flex;
+    align-items: center;
+    /*grid-template-columns: 8fr 1fr 1fr 1fr;*/
+}
+
+.nav__logo{
+    margin-right: auto;
 }
 
 .nav__items {
     text-align: center;
-    padding-top: 5rem;
     border-top: 2px solid transparent;
     color: var(--color-black);
 }
@@ -341,6 +345,10 @@ section {
     padding: 0 2rem;
 }
 
+.head-pop > i {
+    font-size: 26px;
+}
+
 .lodging__popular {
     padding: 2rem 0;
     order: 2;
@@ -492,9 +500,6 @@ footer {
 
 @media screen and (max-width: 640px) {
 
-    html {
-        font-size: 50%;
-    }
     /**
     * HEADER 
     */
