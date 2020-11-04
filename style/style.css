@@ -52,7 +52,6 @@ header {
 nav {
     display: flex;
     align-items: center;
-    /*grid-template-columns: 8fr 1fr 1fr 1fr;*/
 }
 
 .nav__logo{
@@ -75,7 +74,7 @@ nav {
 
 .nav__link:hover {
     color: var(--color-primary);
-    background-color: var(--color-grey);
+    border-top: 2px solid var(--color-primary);
 }
 
 .active {
@@ -166,6 +165,7 @@ h4 {
 }
 
 .filter__items {
+    position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -175,16 +175,28 @@ h4 {
     background-color: var(--color-white);
     margin: 1rem 0;
     padding: 0;
+    transition: .3s;
 }
 
-.filter__items i {
-    padding: 1.2rem;
+.filter__items:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+.filter__ico {
+    box-sizing: border-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
     color: var(--color-primary);
     background-color: var(--color-secondary);
-    border-radius: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.filter__items p {
+.filter__items span {
     padding: 0 2rem;
     margin: 0;
 }
@@ -210,22 +222,22 @@ h4 {
 /**
 * IMAGES
 */
-.hotel-soleil-matin{ background: url('./../img/hebergements/4_small/hotel-soleil-matin_small.jpg') no-repeat center; }
-.aubiere-le-panier{ background: url('./../img/hebergements/4_small/aubiere-le-panier_small.jpg') no-repeat center; }
-.hotel-tout-bleu-blanc{ background: url('./../img/hebergements/4_small/hotel-tout-bleu-blanc_small.jpg') no-repeat center; }
-.auberge-la-cannebiere{ background: url('./../img/hebergements/4_small/auberge-la-cannebiere_small.jpg') no-repeat center; }
-.hotel-du-port{ background: url('./../img/hebergements/4_small/hotel-du-port_small.jpg') no-repeat center; }
-.hotel-les-mouettes{ background: url('./../img/hebergements/4_small/hotel-les-mouettes_small.jpg') no-repeat center; }
-.hotel-de-la-mer{ background: url('./../img/hebergements/4_small/hotel-de-la-mer_small.jpg') no-repeat center; }
-.aubiere-le-panier{ background: url('./../img/hebergements/4_small/aubiere-le-panier_small.jpg') no-repeat center; }
-.hotel-chez-azima{ background: url('./../img/hebergements/4_small/hotel-chez-azima_small.jpg') no-repeat center; }
+.hotel-soleil-matin{ background: url('./../img/hebergements/hotel-soleil-matin_medium.jpg') no-repeat center; }
+.coeur-deau{ background: url('./../img/hebergements/coeur-deau_medium.jpg') no-repeat center; }
+.hotel-tout-bleu-blanc{ background: url('./../img/hebergements/hotel-tout-bleu-blanc_medium.jpg') no-repeat center; }
+.auberge-la-cannebiere{ background: url('./../img/hebergements/auberge-la-cannebiere_medium.jpg') no-repeat center; }
+.hotel-du-port{ background: url('./../img/hebergements/hotel-du-port_medium.jpg') no-repeat center; }
+.hotel-les-mouettes{ background: url('./../img/hebergements/hotel-les-mouettes_medium.jpg') no-repeat center; }
+.hotel-de-la-mer{ background: url('./../img/hebergements/hotel-de-la-mer_medium.jpg') no-repeat center; }
+.auberge-le-panier{ background: url('./../img/hebergements/auberge-le-panier_medium.jpg') no-repeat center; }
+.hotel-chez-azima{ background: url('./../img/hebergements/hotel-chez-azima_medium.jpg') no-repeat center; }
 
-.vieux-port{ background: url('./../img/activites/4_small/vieux-port_small.jpg') no-repeat center; }
-.fort-de-pomegue{ background: url('./../img/activites/4_small/fort-de-pomegue_small.jpg') no-repeat center; }
-.iles-du-frioul{ background: url('./../img/activites/4_small/iles-du-frioul_small.jpg') no-repeat center; }
-.parc-national{ background: url('./../img/activites/4_small/parc-national_small.jpg') no-repeat center; }
-.notre-dame-de-la-garde{ background: url('./../img/activites/4_small/notre-dame-de-la-garde_small.jpg') no-repeat center; }
-.parc-longchamp{ background: url('./../img/activites/4_small/parc-longchamp_small.jpg') no-repeat center; }
+.vieux-port{ background: url('./../img/activites/vieux-port_medium.jpg') no-repeat center; }
+.fort-de-pomegue{ background: url('./../img/activites/fort-de-pomegue_medium.jpg') no-repeat center; }
+.iles-du-frioul{ background: url('./../img/activites/iles-du-frioul_medium.jpg') no-repeat center; }
+.parc-national{ background: url('./../img/activites/parc-national_medium.jpg') no-repeat center; }
+.notre-dame-de-la-garde{ background: url('./../img/activites/notre-dame-de-la-garde_medium.jpg') no-repeat center; }
+.parc-longchamp{ background: url('./../img/activites/parc-longchamp_medium.jpg') no-repeat center; }
 
 .image {
     background-size: cover;
@@ -252,6 +264,8 @@ h4 {
 }
 
 .card .etoile {
+    margin-top: auto;
+    margin-bottom: .5rem;
     color: var(--color-primary);
 }
 
@@ -270,12 +284,6 @@ h4 {
 section {
     margin: 2.5rem 5rem;
 }
-
-/* .lodging {
-    display: grid;
-    grid-template-columns: minmax(300px, 3fr) minmax(300px,1fr);
-    grid-gap: 4rem;
-} */
 
 .lodging {
     display: flex;
@@ -352,7 +360,7 @@ section {
 .lodging__popular {
     padding: 2rem 0;
     order: 2;
-    width: 39rem;
+    width: 45rem;
     margin-left: 2.5rem;
 }
 
@@ -368,12 +376,23 @@ section {
 
 .card__lodging-pop {
     padding: 1rem;
-    height: 15rem;
+    height: 17rem;
     /*width: 35rem;*/
     margin: 2rem;
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-gap: 1rem;
+}
+
+.card__lodging-pop--desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__lodging-pop--desc h3, 
+.card__lodging-pop--desc p {
+    margin: .75rem 0;
 }
 
 .card__lodging-pop > .image {
@@ -448,6 +467,15 @@ footer {
 * RESPONSIVE
 */
 
+@media screen and (max-width: 1650px) {
+    .lodging__popular {
+        width: 35rem;
+    }
+    .lodging__all-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    } 
+}
+
 @media screen and (max-width: 1350px) {
     .lodging {
         flex-direction: column;
@@ -499,11 +527,9 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
-
     /**
     * HEADER 
     */
-
     header {
         margin: 0;
     }
@@ -513,7 +539,6 @@ footer {
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-row: 200px 1fr;
         grid-template-areas: "log reg";
     }
 
