@@ -12,8 +12,8 @@
     <header>
         <nav>
             <img class="nav__items nav__logo" src="./img/logo/Reservia.svg" alt="">
-            <a class="nav__items nav__link active" href="#">Hébergements</a>
-            <a class="nav__items nav__link" href="#">Activités</a>
+            <a class="nav__items nav__link active" href="#hebergement">Hébergements</a>
+            <a class="nav__items nav__link" href="#activite">Activités</a>
             <a class="nav__items nav__register" href="#">S'inscrire</a>
         </nav>
         <div class="search">
@@ -23,7 +23,7 @@
                 <div class="input-group-icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <input class="input-group-text" type="text">
+                <input placeholder="Rechercher une ville..." class="input-group-text" type="text">
                 <button class="input-group-btn"><span class="txt-btn">Rechercher</span><i class="fas fa-search"></i></button>
             </div>
         </div>
@@ -31,20 +31,28 @@
             <h3>Filtres</h3>
             <div class="filter-list">
                 <button class="filter__items">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <p>Économique</p>
+                    <span class="filter__ico">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </span>
+                    <span>Économique</span>
                 </button>
                 <button class="filter__items">
-                    <i class="fas fa-child"></i>
-                    <p>Familial</p>
+                    <span class="filter__ico">
+                        <i class="fas fa-child"></i>
+                    </span>
+                    <span>Familial</span>
                 </button>
                 <button class="filter__items">
-                    <i class="fas fa-heart"></i>
-                    <p>Romantique</p>
+                    <span class="filter__ico">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    <span>Romantique</span>
                 </button>
                 <button class="filter__items">
-                    <i class="fas fa-dog"></i>
-                    <p>Animaux autorisé</p>
+                    <span class="filter__ico">
+                        <i class="fas fa-dog"></i>
+                    </span>
+                    <span>Animaux autorisé</span>
                 </button>
             </div>
         </div>
@@ -52,7 +60,7 @@
     </header>
 
     <!-- Section 1 Hebergement -->
-    <section class="lodging">
+    <section id="hebergement" class="lodging">
         <div class="lodging__popular">
             <div class="head-pop">
                 <h2>Les plus populaires</h2>
@@ -63,7 +71,7 @@
                 <div class="card card__lodging-pop">
                     <a class="card__link" href=""></a>
                     <div class="image hotel-soleil-matin"></div>     
-                    <div>
+                    <div class="card__lodging-pop--desc">
                         <h3>Hôtel Le soleil du matin</h3>
                         <p>Nuit à partir de 128€</p>
                         <div class="etoile">
@@ -78,8 +86,8 @@
 
                 <div class="card card__lodging-pop">
                     <a class="card__link" href=""></a>
-                    <div class="image aubiere-le-panier"></div>     
-                    <div>
+                    <div class="image coeur-deau"></div>     
+                    <div class="card__lodging-pop--desc">
                         <h3>Au cœur de l'eau Chambres d'hôtes</h3>
                         <p>Nuit à partir de 71€</p>
                         <div class="etoile">
@@ -95,7 +103,7 @@
                 <div class="card card__lodging-pop">
                     <a class="card__link" href=""></a>
                     <div class="image hotel-tout-bleu-blanc"></div>
-                    <div>
+                    <div class="card__lodging-pop--desc">
                         <h3>Hôtel Tout bleu et Blanc</h3>
                         <p>Nuit à partir de 68€</p>
                         <div class="etoile">
@@ -181,7 +189,7 @@
 
                 <div class="card card__lodging-all">
                     <a class="card__link" href=""></a>
-                    <div class="image aubiere-le-panier"></div>     
+                    <div class="image auberge-le-panier"></div>     
                     <div class="card-desc__lodging-all">
                         <h3>Auberge Le Panier</h3>
                         <p>Nuit à partir de 23€</p>
@@ -216,7 +224,7 @@
     </section>
 
     <!-- Section 2 Activité -->
-    <section class="activity">
+    <section id="activite" class="activity">
         <h2>Activité à Marseille</h2>
         <div class="activity-list">
             <div class="card card-activity">
