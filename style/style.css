@@ -68,13 +68,13 @@ nav {
     padding: 5rem;
 }
 
-.nav__register {
-    color: var(--color-primary);
-}
-
 .nav__link:hover {
     color: var(--color-primary);
     border-top: 2px solid var(--color-primary);
+}
+
+.nav__register {
+    color: var(--color-primary);
 }
 
 .active {
@@ -115,6 +115,7 @@ h4 {
     border-bottom-right-radius: 10px;
     background-color: var(--color-primary);
     color: var(--color-white);
+    cursor: pointer;
 }
 
 .input-group-text {
