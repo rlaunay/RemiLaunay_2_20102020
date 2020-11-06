@@ -468,12 +468,12 @@ footer {
 * RESPONSIVE
 */
 
-@media and (max-width: 1650px) {
+@media (max-width: 1650px) {
     .lodging__popular {
         width: 35rem;
     }
     .lodging__all-list {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     } 
 }
 
