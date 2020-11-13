@@ -97,7 +97,7 @@ h4 {
 
 .input-group-btn {
 	height: 100%;
-	border: 1px solid #0065fc;
+	border: none;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 	background-color: #0065fc;
